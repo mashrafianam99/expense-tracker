@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Expense Tracker</h1>
+
+<div class="card">
+    <h2>Total Expense</h2>
+    <p>৳ {{ total }}</p>
+</div>
+
+<form method="POST" class="form">
+    <input type="number" step="0.01" name="amount" placeholder="Amount" required>
+    <input type="text" name="category" placeholder="Category" required>
+    <input type="date" name="date" required>
+    <input type="text" name="note" placeholder="Note">
+    <button type="submit">Add Expense</button>
+</form>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Note</th>
+    </tr>
+    {% for expense in expenses %}
+    <tr>
+        <td>{{ expense.date }}</td>
+        <td>{{ expense.category }}</td>
+        <td>৳ {{ expense.amount }}</td>
+        <td>{{ expense.note }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
