@@ -222,7 +222,7 @@ pip install -r requirements.txt
 For questions, bugs, or feature requests, please:
 - Open an issue on GitHub
 - Contact [Mashrafi Anam](https://github.com/mashrafianam99)
-- Email: your-email@example.com
+- Email: mashrafianam99@gmail.com
 
 ---
 
